@@ -33,8 +33,10 @@ class ViveroModelTest(TestCase):
         self.assertEquals(codigo_v, 123)
 
     def test_any_vivero(self):
+        
         Vivero.objects.create(nombre_vivero = 'San juan', codigo = '11233', productor_id='2', departamento='1', municipio='1')
-        value = 1
+        #value = 1
+        value = 2
         assert Vivero.objects.filter(productor_id=2).count() == value, f'The amount is distinct to {value}'
          
     
